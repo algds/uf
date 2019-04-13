@@ -6,3 +6,5 @@
 
 # uf
 union find data structure
+
+[Disjoint-set](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#Operations)
