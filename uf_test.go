@@ -70,3 +70,13 @@ func TestInterfacePanic(t *testing.T) {
 	}()
 	u.Find(5)
 }
+
+func BenchmarkInterface(b *testing.B) {
+	u := New(5)
+	for i := 0; i < b.N; i++ {
+		p, q := i%5, (i+1)%5
+		if !u.Connected(p, q) {
+			u.Union(p, q)
+		}
+	}
+}
